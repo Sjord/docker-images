@@ -1,0 +1,16 @@
+kayako:
+  build: .
+  volumes:
+    - .:/var/www/html
+  links:
+    - db
+  ports:
+    - "8333:80"
+
+db:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: kayako
+    MYSQL_DATABASE: kayako
+    MYSQL_USER: kayako
+    MYSQL_PASSWORD: kayako
