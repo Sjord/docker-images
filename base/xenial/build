@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --no-cache -t sjoerd/ubuntu-base .
+docker build --no-cache -t sjoerd/ubuntu-base:16.04 .
