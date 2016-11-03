@@ -3,4 +3,4 @@ apache:
   volumes:
     - .:/var/www/html
   ports:
-    - "8333:80"
+    - "80"
