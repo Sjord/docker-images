@@ -1,0 +1,8 @@
+etherpad:
+  image: sjoerd/etherpad
+  volumes:
+    - ./etherpad-lite:/etherpad-lite
+  ports:
+    - "9001"
+  stdin_open: true
+  command: /etherpad-lite/bin/run.sh --root
