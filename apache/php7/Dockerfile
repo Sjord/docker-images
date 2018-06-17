@@ -2,6 +2,8 @@ FROM sjoerd/ubuntu-base:16.04
 
 RUN apt-get install -y apache2 libapache2-mod-php php-gd php-curl php-mysql php-json php-imap php-mcrypt php-xml && apt-get clean
 
+RUN a2enmod rewrite
+
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
