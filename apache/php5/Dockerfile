@@ -1,6 +1,6 @@
 FROM sjoerd/ubuntu-base:14.04
 
-RUN apt-get install -y apache2 libapache2-mod-php5 php5-gd php5-curl php5-mysql php5-json php5-imap && apt-get clean
+RUN apt-get install -y apache2 libapache2-mod-php5 php5-gd php5-curl php5-mysql php5-json php5-imap php5-mcrypt && apt-get clean
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
