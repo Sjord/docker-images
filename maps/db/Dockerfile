@@ -1,0 +1,4 @@
+FROM postgres:12
+RUN apt-get update
+RUN apt-get install -y postgresql-12-postgis-3
+ADD docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
