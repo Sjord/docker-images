@@ -1,10 +1,11 @@
 FROM node:8
-RUN yes | adduser tilemill
-USER tilemill
-WORKDIR /home/tilemill
+RUN apt-get update && apt-get install fonts-noto fonts-hanazono unifont
+RUN yes | adduser maps
+USER maps
+WORKDIR /home/maps
 RUN git clone https://github.com/tilemill-project/tilemill.git
-WORKDIR /home/tilemill/tilemill
+WORKDIR /home/maps/tilemill
 RUN npm install
-RUN mkdir -p /home/tilemill/Documents/MapBox/project
+RUN mkdir -p /home/maps/Documents/MapBox/project
 EXPOSE 20009
 CMD ["npm", "start", "--", "--listenHost=0.0.0.0"]
