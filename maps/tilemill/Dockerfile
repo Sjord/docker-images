@@ -1,5 +1,5 @@
 FROM node:8
-RUN apt-get update && apt-get install fonts-noto fonts-hanazono unifont
+RUN apt-get update && apt-get install -y fonts-noto fonts-hanazono unifont
 RUN yes | adduser maps
 USER maps
 WORKDIR /home/maps
