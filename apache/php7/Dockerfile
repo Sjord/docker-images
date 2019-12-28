@@ -1,6 +1,6 @@
-FROM sjoerd/ubuntu-base:16.04
+FROM sjoerd/debian-base:bullseye
 
-RUN apt-get install -y apache2 libapache2-mod-php php-gd php-curl php-mysql php-json php-imap php-mcrypt php-xml php-zip php-mbstring php-xmlrpc php-soap php-intl php-sqlite3 && apt-get clean
+RUN apt-get install -y apache2 libapache2-mod-php php-gd php-curl php-mysql php-json php-imap php-xml php-zip php-mbstring php-xmlrpc php-soap php-intl php-sqlite3 && apt-get clean
 
 RUN a2enmod rewrite
 
