@@ -1,0 +1,6 @@
+apache:
+  build: .
+  volumes:
+    - .:/var/www/html
+  ports:
+    - "80"
